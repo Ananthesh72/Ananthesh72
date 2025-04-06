@@ -1,5 +1,6 @@
 <h1 align="center">Hi 👋, I'm Ananthesh Shenoy</h1>
-<h3 align="center">A passionate Software Developer fresher from India</h3>
+<h3 align="center">A passionate Software Developer from India</h3>
+<h3 align="center">Currently Working in Fin-tech Company in Mangalore</h3>
 
 <h3 align="left">Connect with me:</h3>
 <p align="left">

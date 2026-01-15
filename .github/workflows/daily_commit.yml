@@ -1,0 +1,23 @@
+name: Daily Commit
+on:
+  schedule:
+    - cron: '45 17 * * *'
+  workflow_dispatch: # Allows you to run it manually for testing
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write # Needed to push changes
+    steps:
+      - uses: actions/checkout@v4
+      - name: Update file
+        run: |
+          date > daily_log.txt # Updates a file with the current date
+      - name: Commit and Push
+        run: |
+          git config --global user.name "Ananthesh72"
+          git config --global user.email "anantheshshenoy72@gmail.com"
+          git add daily_log.txt
+          git commit -m "chore: daily update [$(date)]" || echo "daily Updates"
+          git push

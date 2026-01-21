@@ -1,7 +1,8 @@
 name: Daily Commit
 on:
   schedule:
-    - cron: '0 18 * * *'
+  # Runs at 16:30 UTC (10:00 PM IST) and 17:30 UTC (11:00 PM IST)
+    - cron: '30 16,17 * * *'
   workflow_dispatch: # Allows you to run it manually for testing
 
 jobs:
